@@ -10,7 +10,10 @@ using namespace std;
 const int SCORE_COUNT = 5;
 const int MIN_SCORE = 0;
 const int MAX_SCORE = 100;
-
+const double GRADE_A_MIN = 90.0;
+const double GRADE_B_MIN = 75.0;
+const double GRADE_C_MIN = 60.0;
+const string ERROR_MESSAGE = "Invalid score. Enter a value from 0 to 100.";
 int main()
 {
     string studentName;
@@ -65,15 +68,15 @@ int main()
 
         // Choose the grade using the scale from the client
         char grade;
-        if (average >= 90)
+       if (average >= GRADE_A_MIN)
         {
             grade = 'A';
         }
-        else if (average >= 75)
+       else if (average >= GRADE_B_MIN)
         {
             grade = 'B';
         }
-        else if (average >= 60)
+       else if (average >= GRADE_C_MIN)
         {
             grade = 'C';
         }
